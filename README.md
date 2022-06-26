@@ -1,4 +1,4 @@
-# ====基于BERT的中文文本摘要生成====
+# ====中文文本摘要生成====
 # ----------------实验说明--------------
 参考：https://github.com/Machine-Tom/bertsum-chinese-LAI<br>
 基于论文《Fine-tune BERT for Extractive Summarization》的方法和源代码<br>
@@ -123,3 +123,7 @@ python train_LAI.py -mode test -bert_data_path ../bert_data/LCSTS -model_path MO
 (更多资料参考Streamlit官方文档)<br>
 应用的左侧是模型参数，你可以选择你喜欢的摘要层(Transformer、Classifier 、 RNN)进行中文文本摘要
 且可以自定义生成摘要的句子数目，分别是一句，两句和三句。<br>
+![效果图](https://i.postimg.cc/xdz0cTkJ/20220626165852.png "效果图")
+<br><br>
+
+# ------------实验结果------------
