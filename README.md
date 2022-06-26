@@ -1,9 +1,9 @@
-# ===========基于BERT的中文文本摘要生成==========
+# ====基于BERT的中文文本摘要生成====
 # ----------------实验说明--------------
-参考：https://github.com/Machine-Tom/bertsum-chinese-LAI
-基于论文《Fine-tune BERT for Extractive Summarization》的方法和源代码
-进行调整，分别在中文数据集NLPCC2017和LCSTS进行实验
-论文作者主页：http://nlp-yang.github.io/
+参考：https://github.com/Machine-Tom/bertsum-chinese-LAI  
+基于论文《Fine-tune BERT for Extractive Summarization》的方法和源代码  
+进行调整，分别在中文数据集NLPCC2017和LCSTS进行实验 
+论文作者主页：http://nlp-yang.github.io/ 
 
 # ----------------文件说明--------------
 文件夹raw_data：存放数据集的JSON文件
