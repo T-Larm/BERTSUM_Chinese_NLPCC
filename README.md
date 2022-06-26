@@ -1,19 +1,19 @@
 # ====基于BERT的中文文本摘要生成====
 # ----------------实验说明--------------
-参考：https://github.com/Machine-Tom/bertsum-chinese-LAI  
-基于论文《Fine-tune BERT for Extractive Summarization》的方法和源代码  
-进行调整，分别在中文数据集NLPCC2017和LCSTS进行实验 
+参考：https://github.com/Machine-Tom/bertsum-chinese-LAI<br>
+基于论文《Fine-tune BERT for Extractive Summarization》的方法和源代码<br>
+进行调整，分别在中文数据集NLPCC2017和LCSTS进行实验<br>
 论文作者主页：http://nlp-yang.github.io/ 
-
+<br><br>
 # ----------------文件说明--------------
-文件夹raw_data：存放数据集的JSON文件
-文件夹json_data：存放进行切割&分句后的数据集的JSON文件
-文件夹bert_data：存放pt文件，将JSON格式转换为pt格式方便训练（句子标注，详见后面运行说明）
-src/preprocess.py：对数据集进行处理的运行文件
-
-文件夹src/models：存放BERTSUM及摘要层(Classifier、Transformer、RNN)代码的文件夹
-src/train.py：模型训练及模型评估(ROUGE)的运行文件
-文件夹bertsum-chinese/models：存放分别使用三摘要层(Classifier、Transformer、RNN)训练模型的训练数据
+文件夹raw_data：存放数据集的JSON文件 <br>
+文件夹json_data：存放进行切割&分句后的数据集的JSON文件 <br>
+文件夹bert_data：存放pt文件，将JSON格式转换为pt格式方便训练（句子标注，详见后面运行说明）<br>
+src/preprocess.py：对数据集进行处理的运行文件<br>
+<br><br>
+文件夹src/models：存放BERTSUM及摘要层(Classifier、Transformer、RNN)代码的文件夹<br>
+src/train.py：模型训练及模型评估(ROUGE)的运行文件<br>
+文件夹bertsum-chinese/models：存放分别使用三摘要层(Classifier、Transformer、RNN)训练模型的训练数据<br>
 
 predict.py：预测摘要的运行文件
 app.py：使用streamlit实现的Web应用的运行文件
