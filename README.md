@@ -14,15 +14,15 @@ src/preprocess.py：对数据集进行处理的运行文件<br>
 文件夹src/models：存放BERTSUM及摘要层(Classifier、Transformer、RNN)代码的文件夹<br>
 src/train.py：模型训练及模型评估(ROUGE)的运行文件<br>
 文件夹bertsum-chinese/models：存放分别使用三摘要层(Classifier、Transformer、RNN)训练模型的训练数据<br>
-
-predict.py：预测摘要的运行文件
-app.py：使用streamlit实现的Web应用的运行文件
-
-bert-config.json:模型参数设置文件
+<br><br>
+predict.py：预测摘要的运行文件<br>
+app.py：使用streamlit实现的Web应用的运行文件<br>
+<br><br>
+bert-config.json:模型参数设置文件<br>
 
 # ----------------运行环境--------------
-Ubuntu	18.04
-CUDA	10.1
+* Ubuntu	18.04
+* CUDA	10.1
 ## --------------requirement------------
 Python	3.7.7
 Pytorch	1.4.0
