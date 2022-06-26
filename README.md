@@ -10,16 +10,16 @@
 文件夹json_data：存放进行切割&分句后的数据集的JSON文件 <br>
 文件夹bert_data：存放pt文件，将JSON格式转换为pt格式方便训练（句子标注，详见后面运行说明）<br>
 src/preprocess.py：对数据集进行处理的运行文件<br>
-<br><br>
+<br>
 文件夹src/models：存放BERTSUM及摘要层(Classifier、Transformer、RNN)代码的文件夹<br>
 src/train.py：模型训练及模型评估(ROUGE)的运行文件<br>
 文件夹bertsum-chinese/models：存放分别使用三摘要层(Classifier、Transformer、RNN)训练模型的训练数据<br>
-<br><br>
+<br>
 predict.py：预测摘要的运行文件<br>
 app.py：使用streamlit实现的Web应用的运行文件<br>
-<br><br>
+<br>
 bert-config.json:模型参数设置文件<br>
-
+<br><br>
 # ----------------运行环境--------------
 * Ubuntu	18.04
 * CUDA	10.1
@@ -66,7 +66,7 @@ STEP 4：句子标注<br>
 找出与参考摘要最接近的n句话(相似程度以ROUGE衡量)，标注为1(属于摘要)<br>
 在bertsum-chinese/src目录下运行：<br>
 <code>python preprocess_LAI.py -mode format_to_bert -raw_path ../json_data -save_path ../bert_data -oracle_mode greedy -n_cpus 2 -log_file ../logs/preprocess.log</code>
-
+<br><br>
 ## ----------NLPCC2017的预处理-----------
 ①将NLPCC2017数据集的格式整理成整理成bertsum-chinese/raw_data/LCSTS_test.json文件中数据对应格式<br>
 ②相应文件名／路径名也要做调整：-bert_data_path ../bert_data/NLPCC -log_file NLPCC_oracle<br>
