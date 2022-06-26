@@ -125,7 +125,7 @@ python train_LAI.py -mode test -bert_data_path ../bert_data/LCSTS -model_path MO
 且可以自定义生成摘要的句子数目，分别是一句，两句和三句。<br>
 ![效果图](https://i.postimg.cc/xdz0cTkJ/20220626165852.png "效果图")
 <br><br>
-
+<br><br>
 # ------------实验结果------------
 ![结果图1](https://i.postimg.cc/Vv1MKhyg/20220626165901.png "结果图1")
 [![20220626165905.png](https://i.postimg.cc/85bszP3d/20220626165905.png)](https://postimg.cc/zbVqd5q3)
