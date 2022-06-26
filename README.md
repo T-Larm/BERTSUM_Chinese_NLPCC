@@ -128,6 +128,6 @@ python train_LAI.py -mode test -bert_data_path ../bert_data/LCSTS -model_path MO
 <br><br>
 # ------------实验结果------------
 ![结果图1](https://i.postimg.cc/Vv1MKhyg/20220626165901.png "结果图1")
-[![20220626165905.png](https://i.postimg.cc/85bszP3d/20220626165905.png)](https://postimg.cc/zbVqd5q3)
-[![20220626165910.png](https://i.postimg.cc/wxfTfPdB/20220626165910.png)](https://postimg.cc/s1Wr1TxF)
-[![20220626165914.png](https://i.postimg.cc/d0YqZcG5/20220626165914.png)](https://postimg.cc/75Kvjcsz)
+[![结果图2](https://i.postimg.cc/85bszP3d/20220626165905.png)](https://postimg.cc/zbVqd5q3)
+[![结果图3](https://i.postimg.cc/wxfTfPdB/20220626165910.png)](https://postimg.cc/s1Wr1TxF)
+[![结果图4](https://i.postimg.cc/d0YqZcG5/20220626165914.png)](https://postimg.cc/75Kvjcsz)
