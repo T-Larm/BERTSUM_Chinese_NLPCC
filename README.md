@@ -121,13 +121,9 @@ python train_LAI.py -mode test -bert_data_path ../bert_data/LCSTS -model_path MO
 在bertsum-chinese目录下运行：<br>
 <code>streamlit run app.py --browser.serverAddress '127.0.0.1'</code>
 (更多资料参考Streamlit官方文档)<br>
-应用的左侧是模型参数，你可以选择你喜欢的摘要层(Transformer、Classifier 、 RNN)进行中文文本摘要
-且可以自定义生成摘要的句子数目，分别是一句，两句和三句。<br>
-![效果图](https://i.postimg.cc/xdz0cTkJ/20220626165852.png "效果图")
+
+
 <br><br>
 <br><br>
 # ------------实验结果------------
-![结果图1](https://i.postimg.cc/Vv1MKhyg/20220626165901.png "结果图1")
-![结果图2](https://i.postimg.cc/85bszP3d/20220626165905.png "结果图2")
-![结果图3](https://i.postimg.cc/wxfTfPdB/20220626165910.png "结果图3")
-![结果图4](https://i.postimg.cc/d0YqZcG5/20220626165914.png "结果图4")
+自己跑
