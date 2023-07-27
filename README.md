@@ -1,13 +1,13 @@
 # ====BERT-based Chinese Text Summarization====
 ## <a href='./readme_EN.md'>The English README is here</a>
 # ====中文文本摘要生成====
-# ----------------实验说明--------------
+## ----------------实验说明--------------
 参考：https://github.com/Machine-Tom/bertsum-chinese-LAI<br>
 基于论文《Fine-tune BERT for Extractive Summarization》的方法和源代码<br>
 进行调整，分别在中文数据集NLPCC2017和LCSTS进行实验<br>
 论文作者主页：http://nlp-yang.github.io/ 
 <br><br>
-# ----------------文件说明--------------
+## ----------------文件说明--------------
 文件夹raw_data：存放数据集的JSON文件 <br>
 文件夹json_data：存放进行切割&分句后的数据集的JSON文件 <br>
 文件夹bert_data：存放pt文件，将JSON格式转换为pt格式方便训练（句子标注，详见后面运行说明）<br>
@@ -22,10 +22,10 @@ app.py：使用streamlit实现的Web应用的运行文件<br>
 <br>
 bert-config.json:模型参数设置文件<br>
 <br><br>
-# ----------------运行环境--------------
+## ----------------运行环境--------------
 * Ubuntu	18.04
 * CUDA	10.1
-## --------------requirement------------
+### --------------requirement------------
 * Python	3.7.7
 * Pytorch	1.4.0
 * pyrouge	0.1.3
@@ -36,8 +36,8 @@ bert-config.json:模型参数设置文件<br>
 * transformers	2.11.0
 * streamlit	1.7.0
 <br><br>
-# ----------------运行说明--------------
-## ------------数据集的准备------------
+## ----------------运行说明--------------
+### ------------数据集的准备------------
 中文数据集1：LCSTS2.0(A Large Scale Chinese Short Text Summarization Dataset)<br>
 来源：Intelligent Computing Research Center, Harbin Institute of Technology Shenzhen Graduate School<br>
 (哈尔滨工业大学深圳研究生院·智能计算研究中心)<br>
@@ -49,7 +49,7 @@ bert-config.json:模型参数设置文件<br>
 获取途径：http://tcci.ccf.org.cn/conference/2017/taskdata.php<br>
 (Task 3:  Single Document Summarization)<br>
 <br><br>
-## -------------LCSTS的预处理---------------
+### -------------LCSTS的预处理---------------
 STEP 1：首先下载LCSTS2.0原始数据，将LCSTS2.0/DATA目录下所有PART_*.txt文件放入
 bertsum-chinese/raw_data<br>
 <br>
@@ -69,13 +69,13 @@ STEP 4：句子标注<br>
 在bertsum-chinese/src目录下运行：<br>
 <code>python preprocess_LAI.py -mode format_to_bert -raw_path ../json_data -save_path ../bert_data -oracle_mode greedy -n_cpus 2 -log_file ../logs/preprocess.log</code>
 <br><br>
-## ----------NLPCC2017的预处理-----------
+### ----------NLPCC2017的预处理-----------
 ①将NLPCC2017数据集的格式整理成整理成bertsum-chinese/raw_data/LCSTS_test.json文件中数据对应格式<br>
 ②相应文件名／路径名也要做调整：-bert_data_path ../bert_data/NLPCC -log_file NLPCC_oracle<br>
 ③调整完后，预处理部分从STEP 3开始即可<br>
 <br>
 
-## ------------模型训练------------
+### ------------模型训练------------
 提醒：在最开始的时候需要使用单个GPU以便下载BERT model<br>
 将-visible_gpus 0,1,2 -gpu_ranks 0,1,2 -world_size 3 改为 -visible_gpus 0 -gpu_ranks 0 -world_size 1<br>
 下载完成后你可以关闭进程然后重新使用多GPU来跑代码<br>
@@ -107,7 +107,7 @@ python train_LAI.py -mode train -encoder transformer -dropout 0.1 -bert_data_pat
 <br><br>
 注意：当数据集切换成NLPCC2017的时候，需要将/bert_data/LCSTS改成/bert_data/NLPCC(这取决于你的文件名)<br>
 <br><br>
-## ------------模型评估------------
+### ------------模型评估------------
 在bertsum-chinese/src目录下运行：<br>
 <code>
 python train_LAI.py -mode test -bert_data_path ../bert_data/LCSTS -model_path MODEL_PATH -visible_gpus 1 -gpu_ranks 0 -batch_size 30000 -log_file LOG_FILE -result_path ../results/LCSTS -test_all -block_trigram False -test_from ../models/bert_transformer/model_step_30000.pt
@@ -119,7 +119,7 @@ python train_LAI.py -mode test -bert_data_path ../bert_data/LCSTS -model_path MO
 ②RESULT_PATH is where you want to put decoded summaries (default ../results/LCSTS)<br>
 <br><br>
 
-## ------------Streamlit实现Web应用------------
+### ------------Streamlit实现Web应用------------
 在bertsum-chinese目录下运行：<br>
 <code>streamlit run app.py --browser.serverAddress '127.0.0.1'</code>
 (更多资料参考Streamlit官方文档)<br>
@@ -127,5 +127,5 @@ python train_LAI.py -mode test -bert_data_path ../bert_data/LCSTS -model_path MO
 
 <br><br>
 <br><br>
-# ------------实验结果------------
+## ------------实验结果------------
 自己跑
