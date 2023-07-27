@@ -1,3 +1,5 @@
+# ====BERT-based Chinese Text Summarization====
+## <a href='./readme_EN.md'>The English README is here</a>
 # ====中文文本摘要生成====
 # ----------------实验说明--------------
 参考：https://github.com/Machine-Tom/bertsum-chinese-LAI<br>
